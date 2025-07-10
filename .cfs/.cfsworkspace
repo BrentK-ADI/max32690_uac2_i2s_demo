@@ -1,0 +1,11 @@
+{
+  "Soc": "MAX32690",
+  "Package": "TQFN",
+  "WorkspacePluginId": "com.analog.singlecore.msdk.helloworld",
+  "WorkspacePluginVersion": "1.0.0",
+  "WorkspaceName": "max32690_tusb_i2s_cfs",
+  "Board": "EvKit_V1",
+  "Projects": [],
+  "DataModelVersion": "1.1.44",
+  "DataModelSchemaVersion": "1.1.0"
+}

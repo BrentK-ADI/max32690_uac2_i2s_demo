@@ -1,0 +1,352 @@
+{
+  "Copyright": "Copyright (c) 2025 Analog Devices, Inc.  All rights reserved. This software is proprietary to Analog Devices, Inc. and its licensors.",
+  "DataModelVersion": "1.1.44",
+  "DataModelSchemaVersion": "1.1.0",
+  "Soc": "MAX32690",
+  "Package": "TQFN",
+  "BoardName": "EvKit_V1",
+  "Timestamp": "2025-07-09T15:51:33.269Z",
+  "Pins": [
+    {
+      "Pin": "3",
+      "Peripheral": "I2S0",
+      "Signal": "SDI"
+    },
+    {
+      "Pin": "4",
+      "Peripheral": "I2S0",
+      "Signal": "SCK"
+    },
+    {
+      "Pin": "5",
+      "Peripheral": "I2S0",
+      "Signal": "SDO"
+    },
+    {
+      "Pin": "7",
+      "Peripheral": "GPIO0",
+      "Signal": "P0.7"
+    },
+    {
+      "Pin": "8",
+      "Peripheral": "GPIO0",
+      "Signal": "P0.8"
+    },
+    {
+      "Pin": "9",
+      "Peripheral": "GPIO0",
+      "Signal": "P0.9"
+    },
+    {
+      "Pin": "14",
+      "Peripheral": "GPIO0",
+      "Signal": "P0.14"
+    },
+    {
+      "Pin": "15",
+      "Peripheral": "UART2",
+      "Signal": "RX"
+    },
+    {
+      "Pin": "16",
+      "Peripheral": "UART2",
+      "Signal": "TX"
+    },
+    {
+      "Pin": "17",
+      "Peripheral": "I2C2",
+      "Signal": "SDA"
+    },
+    {
+      "Pin": "18",
+      "Peripheral": "I2C2",
+      "Signal": "SCL"
+    },
+    {
+      "Pin": "60",
+      "Peripheral": "GPIO4",
+      "Signal": "P4.0"
+    },
+    {
+      "Pin": "67",
+      "Peripheral": "GPIO2",
+      "Signal": "P2.12"
+    },
+    {
+      "Pin": "68",
+      "Peripheral": "I2S0",
+      "Signal": "WS"
+    }
+  ],
+  "ClockNodes": [
+    {
+      "Name": "UART0/2",
+      "Control": "UART2_ENABLE",
+      "Value": "TRUE",
+      "Enabled": true
+    },
+    {
+      "Name": "UART0/2",
+      "Control": "UART2_MUX",
+      "Value": "IBRO",
+      "Enabled": true
+    },
+    {
+      "Name": "SYS_OSC Mux",
+      "Control": "MUX",
+      "Value": "IPO",
+      "Enabled": false
+    },
+    {
+      "Name": "I2C0/2",
+      "Control": "I2C2_ENABLE",
+      "Value": "TRUE",
+      "Enabled": true
+    },
+    {
+      "Name": "P0.23",
+      "Control": "P0_23_FREQ",
+      "Value": "25000000",
+      "Enabled": false
+    }
+  ],
+  "Projects": [
+    {
+      "CoreId": "CM4",
+      "ProjectId": "CM4",
+      "PluginId": "com.analog.project.msdk.plugin",
+      "PluginVersion": "1.0.0",
+      "FirmwarePlatform": "msdk",
+      "ExternallyManaged": false,
+      "PlatformConfig": {
+        "ProjectName": "m4",
+        "Cflags": [
+          "-fdump-rtl-expand",
+          "-fdump-rtl-dfinish",
+          "-fdump-ipa-cgraph",
+          "-fstack-usage",
+          "-gdwarf-4"
+        ]
+      },
+      "Partitions": [
+        {
+          "Name": "FLASH",
+          "StartAddress": "0x10000000",
+          "Size": 3407872,
+          "IsOwner": true,
+          "Access": "R",
+          "Config": {}
+        },
+        {
+          "Name": "SRAM",
+          "StartAddress": "0x20000000",
+          "Size": 1048576,
+          "IsOwner": true,
+          "Access": "R/W",
+          "Config": {}
+        }
+      ],
+      "Peripherals": [
+        {
+          "Name": "CM4 SysTick",
+          "Signals": [],
+          "Config": {
+            "ENABLE": "FALSE"
+          }
+        },
+        {
+          "Name": "UART2",
+          "Signals": [
+            {
+              "Name": "CTS",
+              "Config": {}
+            },
+            {
+              "Name": "RTS",
+              "Config": {}
+            },
+            {
+              "Name": "RX",
+              "Config": {
+                "PWR": "VDDIO",
+                "PS": "WEAK_PU"
+              }
+            },
+            {
+              "Name": "TX",
+              "Config": {
+                "PWR": "VDDIO"
+              }
+            }
+          ],
+          "Config": {
+            "PARITY": "DISABLED",
+            "PARITY_MD": "MARK",
+            "CHAR_SIZE": "8",
+            "STOP_BITS": "1",
+            "HW_FLOW_CTRL": "DISABLED",
+            "BAUD": "115200"
+          }
+        },
+        {
+          "Name": "GPIO0",
+          "Signals": [
+            {
+              "Name": "P0.7",
+              "Config": {
+                "MODE": "OUT",
+                "PWR": "VDDIO",
+                "DS": "0"
+              }
+            },
+            {
+              "Name": "P0.8",
+              "Config": {
+                "MODE": "OUT",
+                "PWR": "VDDIO",
+                "DS": "0"
+              }
+            },
+            {
+              "Name": "P0.9",
+              "Config": {
+                "MODE": "OUT",
+                "PWR": "VDDIO",
+                "DS": "0"
+              }
+            },
+            {
+              "Name": "P0.14",
+              "Config": {
+                "MODE": "OUT",
+                "PWR": "VDDIO",
+                "DS": "0"
+              }
+            }
+          ],
+          "Config": {}
+        },
+        {
+          "Name": "GPIO2",
+          "Signals": [
+            {
+              "Name": "P2.12",
+              "Config": {
+                "MODE": "OUT",
+                "PWR": "VDDIO",
+                "DS": "0"
+              }
+            }
+          ],
+          "Config": {}
+        },
+        {
+          "Name": "GPIO4",
+          "Signals": [
+            {
+              "Name": "P4.0",
+              "Config": {
+                "MODE": "IN",
+                "PS": "PU"
+              }
+            }
+          ],
+          "Config": {}
+        },
+        {
+          "Name": "I2C2",
+          "Signals": [
+            {
+              "Name": "SCL",
+              "Config": {
+                "PWR": "VDDIO",
+                "PS": "DIS"
+              }
+            },
+            {
+              "Name": "SDA",
+              "Config": {
+                "PWR": "VDDIO",
+                "PS": "DIS"
+              }
+            }
+          ],
+          "Config": {
+            "MODE": "TARGET",
+            "GC_ADDR_EN": "IGNORE",
+            "CLKSTR": "TRUE",
+            "PRELOAD_MODE": "NORMAL",
+            "SCL_TIMEOUT": "0",
+            "TRANSMIT_DMA_ENABLE": "FALSE",
+            "RECEIVE_DMA_ENABLE": "FALSE",
+            "TARGET0_ADDR": "0",
+            "FREQ": "100000"
+          }
+        },
+        {
+          "Name": "I2S0",
+          "Signals": [
+            {
+              "Name": "CLKEXT",
+              "Config": {}
+            },
+            {
+              "Name": "SCK",
+              "Config": {
+                "PWR": "VDDIO"
+              }
+            },
+            {
+              "Name": "SDI",
+              "Config": {
+                "PWR": "VDDIO"
+              }
+            },
+            {
+              "Name": "SDO",
+              "Config": {
+                "PWR": "VDDIO"
+              }
+            },
+            {
+              "Name": "WS",
+              "Config": {
+                "PWR": "VDDIO"
+              }
+            }
+          ],
+          "Config": {}
+        },
+        {
+          "Name": "DMA",
+          "Signals": [],
+          "Config": {}
+        }
+      ]
+    },
+    {
+      "CoreId": "RV",
+      "ProjectId": "RV",
+      "PluginId": "",
+      "PluginVersion": "",
+      "FirmwarePlatform": "",
+      "ExternallyManaged": true,
+      "Partitions": [],
+      "Peripherals": []
+    }
+  ],
+  "ClockFrequencies": {
+    "SYS_CLK_DIV_2": 60000000,
+    "Cortex-M4": 120000000,
+    "FLC0/1": 120000000,
+    "SYS_OSC": 120000000,
+    "IBRO": 7372800,
+    "SYS_CLK": 120000000,
+    "IPO": 120000000,
+    "PCLK": 60000000,
+    "I2C0": 60000000,
+    "I2C2": 60000000,
+    "UART0": 60000000,
+    "UART2": 7372800
+  }
+}

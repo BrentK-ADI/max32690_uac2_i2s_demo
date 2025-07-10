@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "path": ".cfs",
+    },
+    {
+      "path": "m4",
+    },
+  ],
+  "settings": {
+    "cfs.configureWorkspace": "Yes",
+    "terminal.integrated.defaultProfile.windows": "CFS Terminal",
+    "terminal.integrated.defaultProfile.osx": "CFS Terminal",
+    "terminal.integrated.defaultProfile.linux": "CFS Terminal",
+    "cfs.activeContext": "m4",
+    "explorer.excludeGitIgnore": false,
+  },
+}
