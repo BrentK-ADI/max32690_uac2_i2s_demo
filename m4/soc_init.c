@@ -4,7 +4,7 @@
  * This file was generated using Analog Devices CodeFusion Studio.
  * https://github.com/analogdevicesinc/codefusion-studio
  *
- * Generated at: 2025-07-09T15:51:53.891Z 
+ * Generated at: 2025-07-22T22:02:42.280Z 
  *
  * SPDX-License-Identifier: Apache-2.0
  * Copyright (c) 2025 Analog Devices, Inc.
@@ -293,7 +293,7 @@ int PeripheralInit(void) {
 
     /* Initialize the peripheral. */
     result = MXC_I2C_Init(MXC_I2C2,
-                          0,
+                          1,
                           0U);
     if (result != E_NO_ERROR) {
       return result;
@@ -313,12 +313,6 @@ int PeripheralInit(void) {
 
     /* Set the timeout. */
     MXC_I2C_SetTimeout(MXC_I2C2, 0U);
-
-    /* Disable preload mode. */
-    MXC_I2C_DisablePreload(MXC_I2C2);
-
-    /* Disable general call acknowledgement. */
-    MXC_I2C_DisableGeneralCall(MXC_I2C2);
 
   }
 

@@ -5,7 +5,7 @@
   "Soc": "MAX32690",
   "Package": "TQFN",
   "BoardName": "EvKit_V1",
-  "Timestamp": "2025-07-09T15:51:33.269Z",
+  "Timestamp": "2025-07-22T22:02:28.799Z",
   "Pins": [
     {
       "Pin": "3",
@@ -272,14 +272,11 @@
             }
           ],
           "Config": {
-            "MODE": "TARGET",
-            "GC_ADDR_EN": "IGNORE",
+            "MODE": "CONTROLLER",
             "CLKSTR": "TRUE",
-            "PRELOAD_MODE": "NORMAL",
             "SCL_TIMEOUT": "0",
             "TRANSMIT_DMA_ENABLE": "FALSE",
             "RECEIVE_DMA_ENABLE": "FALSE",
-            "TARGET0_ADDR": "0",
             "FREQ": "100000"
           }
         },

@@ -31,8 +31,12 @@ indicating more verbose logging.
 This project is only available on the MAX32690EVKIT
 
 If using the MAX32690EVKIT:
--   Connect a USB cable between the PC and the CN2 (USB/PWR/UART) connector.
+-   Verify V_AUX_SEL (JP11) is in the 1V8 Position
+-   Verify P1_8_SEL (JP10) is in the SCL Position
+-   Verify P1_7_SEL (JP9) is in the SDA Position
 -   Connect a Audio source to the Line In jack of the EvKit
+    - **NOTE:** This input is Line level. To prevent distortion and unwanted
+    artifacts, the source level should match
 -   Connect a USB cable between the PC and the CN1 (USB/PWR) connector.
 
 ## Expected Output

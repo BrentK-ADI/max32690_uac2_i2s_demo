@@ -156,12 +156,12 @@ void ConfigureCodec()
     CodecWriteReg(0x06, 0x60); //NI=0x6000, giving LRCLK 48kHz
     CodecWriteReg(0x09, 0x02);
     CodecWriteReg(0x08, 0x98); //I2S format, data is delayed 1 bit clock, HI-Z mode disabled
-    CodecUpdateReg(0x14, 0xF0, (2 << 6) | (2 << 4)); //Stereo Line In
-    CodecUpdateReg(0xD, 0xFF, (0xF << 4) | (0xF & 0x0F)); //ADC Level -12Db
-    CodecUpdateReg(0xE, 0x40, 1 << 6); //Disconnect Line in from Left Headphone
-    CodecUpdateReg(0xF, 0x40, 1 << 6); //Disconnect Line in from Right Headphone
-    CodecUpdateReg(0xE, 0xF, 0xF); //Line in -6dB
-    CodecUpdateReg(0xF, 0xF, 0xF); //Line in -6dB
+    CodecWriteReg(0x14, 0xA0); //Stereo Line In
+    CodecWriteReg(0x15, 0x00);
+    CodecWriteReg(0xA, 0x90); //Audio filters
+    CodecWriteReg(0xD, 0xFF); //ADC Level -12Db
+    CodecWriteReg(0xE, 0x4F); //Line in -6dB, disconnected from headphone
+    CodecWriteReg(0xF, 0x4F); //Line in -6dB, disconnected from headphones
 
     //Assert SHDN as first step in toggling SHDN when changing enabled circuitry
     CodecUpdateReg(0x17, 0x80, 0x00);
